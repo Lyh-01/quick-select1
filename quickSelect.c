@@ -27,9 +27,9 @@ int partition(int arr[], int n) {
 //Quickselect function
 int qs(int arr[], int n, int k) {
 	int p = partition(arr, n);
-	if (k == p) {
+	if (k - 1 == p) {
 		return arr[p];
-	} else if (k < p) {
+	} else if (k - 1 < p) {
 		return qs(arr, p, k);
 	} else {
 		return qs(arr + p + 1, n - (p + 1), k - (p + 1));
